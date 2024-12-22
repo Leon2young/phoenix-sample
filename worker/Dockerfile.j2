@@ -1,0 +1,8 @@
+FROM swr.cn-north-4.myhuaweicloud.com/fenghuang-dev/openjdk-8-jdk-alpine
+
+WORKDIR /code
+
+# Adding target
+ADD target /code/target
+
+CMD ["java", "-jar", "target/worker-jar-with-dependencies.jar"]
